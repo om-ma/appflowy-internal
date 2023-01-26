@@ -14,11 +14,11 @@ function home() {
 
   return (
     <div>
-      <Grid container direction="row" spacing={2}>
-        <Grid item xs={3}>
+      <Grid container direction="row" spacing={0}>
+        <Grid item xs={2}>
           <SideBar />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={10}>
           <Navbar />
           <Board />
         </Grid>
