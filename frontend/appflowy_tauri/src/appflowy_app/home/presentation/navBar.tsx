@@ -1,8 +1,6 @@
-
 import * as React from 'react';
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Grid from "@material-ui/core/Grid";
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
@@ -36,8 +34,20 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '5px',
     color: theme.palette.warning.main,
   },
-  arrowIcon: {
+  arrowLeft: {
     fontSize: '16px',
+    margin: '5px 5px 0 0'
+  },
+  arrowRight: {
+    fontSize: '15px',
+    marginTop: '5px',
+    color: theme.palette.grey.A100
+  },
+  breadCrumbs: {
+    marginLeft: '30px',
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: '15px',
+    }
   },
   flexGrow: {
     flexGrow: 1
@@ -56,8 +66,6 @@ const useStyles = makeStyles(theme => ({
 function navBar() {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   
@@ -77,12 +85,14 @@ function navBar() {
             <AppBar position="static" className={classes.AppBar}>
               <Toolbar>
                 <Link href="/">
-                  <KeyboardArrowLeftIcon className={classes.arrowIcon}/>
+                  <KeyboardArrowLeftIcon className={classes.arrowLeft}/>
                 </Link>
                 <Link href="/">
-                  <KeyboardArrowRightIcon className={classes.arrowIcon}/>
+                  <KeyboardArrowRightIcon className={classes.arrowRight}/>
                 </Link>
-                <Breadcrumbs aria-label="breadcrumb">
+                <Breadcrumbs aria-label="breadcrumb"
+                  className={classes.breadCrumbs}
+                >
                   <Link underline="hover" href="/">
                     Getting Started
                   </Link>

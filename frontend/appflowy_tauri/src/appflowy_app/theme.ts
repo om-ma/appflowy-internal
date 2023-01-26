@@ -3,6 +3,7 @@ import { createTheme } from '@material-ui/core/styles';
 const darkCharcol = "#333333";
 const lightBlue = "#00BCF0";
 const silverGray = "#828282";
+const lightGray = "#BDBDBD"
 const yellowColor = "#FFD667";
 
 export default createTheme({
@@ -15,6 +16,10 @@ export default createTheme({
     },
     secondary: {
       main: lightBlue
+    },
+    grey: {
+      A100: lightGray,
+      A200: silverGray,
     }
   },
   typography: {
