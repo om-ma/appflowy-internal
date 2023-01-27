@@ -10,12 +10,20 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@material-ui/styles": "^4.11.5",
     "@tauri-apps/api": "^1.2.0",
+    "contentful": "^9.2.19",
     "google-protobuf": "^3.21.2",
-    "ts-results": "^3.3.0",
+    "install": "^0.13.0",
     "nanoid": "^4.0.0",
+    "npm": "^9.3.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.7.0",
+    "ts-results": "^3.3.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.2.2",

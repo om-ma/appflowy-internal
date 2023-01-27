@@ -5,3 +5,7 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafb);
 }
+.MuiTreeItem-root.Mui-selected>.MuiTreeItem-content .MuiTreeItem-label:hover,
+.MuiTreeItem-root.Mui-selected:focus>.MuiTreeItem-content .MuiTreeItem-label {
+  background-color: transparent !important;
+}
