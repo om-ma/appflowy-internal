@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         white: '#ffffff',
         black: '#000000',
+        charcoal: '#333333',
         main: {
           accent: '#00BCF0',
           hovered: '#00B7EA',
